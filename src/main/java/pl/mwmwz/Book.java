@@ -1,7 +1,9 @@
+package pl.mwmwz;
+
 import lombok.Getter;
 import lombok.Setter;
 
-public class Book {
+public class Book implements Comparable<Book>{
 
     @Getter
     @Setter
@@ -9,14 +11,14 @@ public class Book {
 
     @Getter
     @Setter
-    private int indexBook;
+    private String indexBook;
 
     @Getter
     @Setter
     private int yearPublicationBook;
 
 
-    public Book(String titleBook, int indexBook, int yearPublicationBook) {
+    public Book(String titleBook, String indexBook, int yearPublicationBook) {
         this.titleBook = titleBook;
         this.indexBook = indexBook;
         this.yearPublicationBook = yearPublicationBook;
@@ -27,5 +29,10 @@ public class Book {
         return  "\"" + titleBook + "\"" +
                 ", index: " + indexBook +
                 ", year: " + yearPublicationBook;
+    }
+
+    @Override
+    public int compareTo(Book o) {
+        return Integer.compare(this.yearPublicationBook,o.yearPublicationBook );
     }
 }

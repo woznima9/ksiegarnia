@@ -1,3 +1,5 @@
+package pl.mwmwz;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -22,7 +24,7 @@ public class KsiegarniaApp {
     }
 
 
-    private static List<Book> createBooksFromFile() {
+     static List<Book> createBooksFromFile() {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(ClassLoader.getSystemResourceAsStream(BOOKS_FILE_NAME)));
         List<Book> books = new ArrayList<>();
         try {
@@ -40,10 +42,13 @@ public class KsiegarniaApp {
         return books;
     }
 
+
     private static Book createBook(String[] attributes) {
-        return new Book(attributes[0], Integer.parseInt(attributes[1]), Integer.parseInt(attributes[2]));
+        return new Book(attributes[0], (attributes[1]), Integer.parseInt(attributes[2]));
 
     }
+
+
 }
 
 

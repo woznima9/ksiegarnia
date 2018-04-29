@@ -1,3 +1,5 @@
+package pl.mwmwz;
+
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -51,11 +53,11 @@ public class KsiegarniaMenu {
 
     public void pokazWydanePrzed2005(List<Book> allBooks) {
         boolean znaleziono = false;
-        for (Book element : allBooks) {
-            if (element.getYearPublicationBook() < 2005) {
-                System.out.println(element);
-                znaleziono = true;
-            }
+            for (Book element : allBooks) {
+                if (element.getYearPublicationBook() < 2005) {
+                    System.out.println(element);
+                    znaleziono = true;
+                }
         }
         if (znaleziono == false) {
             System.out.println("Nie znaleziono takiej pozycji");

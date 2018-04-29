@@ -1,3 +1,5 @@
+package pl.mwmwz;
+
 import lombok.Getter;
 import lombok.Setter;
 
