@@ -53,11 +53,11 @@ public class KsiegarniaMenu {
 
     public void pokazWydanePrzed2005(List<Book> allBooks) {
         boolean znaleziono = false;
-            for (Book element : allBooks) {
-                if (element.getYearPublicationBook() < 2005) {
-                    System.out.println(element);
-                    znaleziono = true;
-                }
+        for (Book element : allBooks) {
+            if (element.getYearPublicationBook() < 2005) {
+                System.out.println(element);
+                znaleziono = true;
+            }
         }
         if (znaleziono == false) {
             System.out.println("Nie znaleziono takiej pozycji");
@@ -66,13 +66,13 @@ public class KsiegarniaMenu {
 
     public void pokazWydanePrzed2003(List<Book> allBooks) {
         List<Book> przefiltrowana = allBooks.stream().filter(book -> book
-                .getYearPublicationBook() < 2004).collect(Collectors.toList());
+                .getYearPublicationBook() < 2003).collect(Collectors.toList());
 
-if (przefiltrowana.isEmpty()) {
-    System.out.println("Nie znaleziono");
-} else {
-    przefiltrowana.forEach(book -> System.out.println(book));
-}
+        if (przefiltrowana.isEmpty()) {
+            System.out.println("Nie znaleziono");
+        } else {
+            przefiltrowana.forEach(book -> System.out.println(book));
+        }
     }
 
 
